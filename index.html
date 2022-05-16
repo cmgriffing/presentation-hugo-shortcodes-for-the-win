@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>01-intro</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reset.css">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="hugo-shortcodes-for-the-win" class="slide level1">
+<h1>Hugo Shortcodes for the Win</h1>
+</section>
+<section class="slide level1">
+
+<section id="about-me" class="level2">
+<h2>About Me</h2>
+<ul>
+<li>Twitch programming streamer</li>
+<li>Somewhat Senior Software Developer</li>
+<li>Interested in Dev Rel/Advocacy</li>
+<li>Loves to snowboard</li>
+</ul>
+<aside class="notes">
+<p>I work on all sorts of stuff. Node.js, Go, Rust, Elixir.</p>
+</aside>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="about-hugo" class="level2">
+<h2>About Hugo</h2>
+<p>A Static Site Generator built with Go</p>
+<p>Notes:</p>
+<ul>
+<li>It’s fast!!!</li>
+<li>Ships as a binary
+<ul>
+<li>homebrew (mac)</li>
+<li>chocolatey (windows)</li>
+<li>snap (linux)</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>not going to cover eveything about hugo in this talk</p>
+<p>static site generators are great for fast scalable content sites (not dynamic content) Deployable to Github Pages and many other places</p>
+<p>Since it ships as a binary, Go is not required to be installed.</p>
+<p>If installing from github releases, be aware of the difference between hugo and hugo-extended.</p>
+<p>homebrew version is extended by default</p>
+</aside>
+</section>
+<section id="theming" class="level2">
+<h2>Theming</h2>
+<p>No default theme</p>
+<p>Find starters here: <a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
+</section>
+<section id="content" class="level2">
+<h2>Content</h2>
+<ul>
+<li>unlimited content types</li>
+<li>taxonomies</li>
+<li>menus</li>
+<li>dynamic API-driven content</li>
+<li>baked-in i18n</li>
+</ul>
+</section>
+<section id="templating" class="level2">
+<h2>Templating</h2>
+<p>Uses Go Templates</p>
+</section>
+<section id="structure" class="level2">
+<h2>Structure</h2>
+<p>Convention over Configuration</p>
+<p><a href="https://gohugo.io/getting-started/directory-structure/">https://gohugo.io/getting-started/directory-structure/</a></p>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="extending-hugo" class="level2">
+<h2>Extending Hugo</h2>
+<ul>
+<li>Modules</li>
+<li>Shortcodes</li>
+</ul>
+<aside class="notes">
+<p>Extending Hugo with custom functions requires modifying the source and building it custom</p>
+</aside>
+</section>
+<section id="modules" class="level2">
+<h2>Modules</h2>
+<p>Powered by Go Modules</p>
+<p>Most commands require Go &gt;= 1.12</p>
+</section>
+<section id="shortcodes" class="level2">
+<h2>Shortcodes</h2>
+<p>Think about them like custom elements</p>
+<p>Only usable in Content files</p>
+<p>Examples:</p>
+<pre><code>{{% mdshortcode %}}Stuff to `process` in the *center*.{{% /mdshortcode %}}
+
+{{&lt; highlight go &gt;}} A bunch of code here {{&lt; /highlight &gt;}}
+</code></pre>
+<aside class="notes">
+<p>Not usable in layout files like in themes</p>
+<p>If you need the type of drop-in functionality that shortcodes provide but in a template, you most likely want a partial template instead.</p>
+</aside>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="shortcodes-1" class="level2">
+<h2>Shortcodes</h2>
+<p>Two types</p>
+<p><code>%</code> Means the content will be parsed</p>
+<p><code>&lt;</code> Will not render the content further</p>
+<aside class="notes">
+
+</aside>
+</section>
+<section id="built-in-shortcodes" class="level2">
+<h2>Built-in Shortcodes</h2>
+<ul>
+<li>figure</li>
+<li>gist</li>
+<li>highlight</li>
+<li>instagram</li>
+<li>tweet</li>
+<li>vimeo</li>
+<li>youtube</li>
+<li>param</li>
+</ul>
+</section>
+<section id="custom-shortcodes" class="level2">
+<h2>Custom Shortcodes</h2>
+<ul>
+<li>positional and named parameters</li>
+</ul>
+<p>Example:</p>
+<pre><code>{{&lt; year &gt;}}</code></pre>
+<pre><code>{{ now.Format &quot;2006&quot; }}</code></pre>
+<p><a href="https://gohugo.io/templates/shortcode-templates/">https://gohugo.io/templates/shortcode-templates/</a></p>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="my-shortcode" class="level2">
+<h2>My Shortcode</h2>
+<p>Hugo Image (Inspired by Gatsby Image)</p>
+<p>Creates Placeholder images using the blur-up technique or a “pixellated” technique</p>
+<p><a href="https://github.com/cmgriffing/hugo-image">https://github.com/cmgriffing/hugo-image</a></p>
+<aside class="notes">
+<p>I need to figure out a better way to distribute it instead of just copying into place.</p>
+<p>It is meant to create placeholders</p>
+</aside>
+</section>
+<section id="why" class="level2">
+<h2>Why</h2>
+<ul>
+<li>Faster page loads</li>
+<li>Less initial data over the wire</li>
+<li>Uses Intersection Observer to lazy load images</li>
+</ul>
+<aside class="notes">
+<p>loading=“lazy” does not do placeholders</p>
+<p>loading=“lazy” is also not enabled by default in Safari (mobile and desktop)</p>
+</aside>
+</section>
+<section id="usage" class="level2">
+<h2>Usage</h2>
+<p>An example of a remote image path:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">// An example of a remote image</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>{{&lt;hugo-image src=<span class="st">&quot;https://www.fillmurray.com/460/301&quot;</span>&gt;}}</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">// An example of a Global Resource in the `assets` folder:</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>{{&lt;hugo-image src=<span class="st">&quot;images/460x300-global.jpeg&quot;</span> resourceType=<span class="st">&quot;global&quot;</span>&gt;}}</span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">// An example of a Page resource in the content&#39;s folder:</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>{{&lt;hugo-image src=<span class="st">&quot;460x300.jpg&quot;</span>&gt;}}</span></code></pre></div>
+<aside class="notes">
+<p>Content images live in the same folder as a content file</p>
+</aside>
+</section>
+<section id="configuration" class="level2">
+<h2>Configuration</h2>
+<ul>
+<li><p>src - required - This is the path to the image to process. It can be remote, global, or a page resource.</p></li>
+<li><p>pixelHeight - optional - This is the height in pixels to make the img element. Helps fight page shifting. Uses actual image height by default.</p></li>
+<li><p>pixelWidth - optional - This is the width in pixels to make the img element. Helps fight page shifting. Uses actual image width by default.</p></li>
+</ul>
+</section>
+<section id="configuration-contd" class="level2">
+<h2>Configuration (contd)</h2>
+<ul>
+<li><p>resourceType - optional - “page” | “global” - This determines where the image asset is loaded from. Default will look in Page folder. Defaults to “page”.</p></li>
+<li><p>preloaderType - optional - “blurred” | “pixellated” - This determines which preloader type is used. Defaults to “blurred”.</p></li>
+</ul>
+</section>
+<section id="more-info" class="level2">
+<h2>More info</h2>
+<p><a href="https://github.com/cmgriffing/hugo-image">https://github.com/cmgriffing/hugo-image</a></p>
+<p>Roadmap:</p>
+<ul>
+<li>figure out how to include script and style snippets at a global level instead of shortcodes</li>
+<li>add file for render hook to process markdown images</li>
+</ul>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="anatomy-shortcode" class="level2">
+<h2>Anatomy (Shortcode)</h2>
+<p>File Location:</p>
+<p><code>layouts/shortcodes/hugo-image.html</code></p>
+<aside class="notes">
+<p>The file name determines the shortcode itself.</p>
+</aside>
+</section>
+<section id="constants" class="level2">
+<h2>Constants</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb5-1"><a href="#cb5-1"></a>{{<span class="co">/* CONSTANTS */</span>}}</span>
+<span id="cb5-2"><a href="#cb5-2"></a>{{$PRELOADER_TYPE_BLURRED := <span class="st">&quot;blurred&quot;</span>}}</span>
+<span id="cb5-3"><a href="#cb5-3"></a>{{$PRELOADER_TYPE_PIXELLATED := <span class="st">&quot;pixellated&quot;</span>}}</span>
+<span id="cb5-4"><a href="#cb5-4"></a>{{$RESOURCE_TYPE_PAGE := <span class="st">&quot;page&quot;</span>}}</span>
+<span id="cb5-5"><a href="#cb5-5"></a>{{$RESOURCE_TYPE_GLOBAL := <span class="st">&quot;global&quot;</span>}}</span></code></pre></div>
+<aside class="notes">
+<p>Useful to prevent too many “magic strings”</p>
+</aside>
+</section>
+<section id="propsparameters" class="level2">
+<h2>Props/Parameters</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb6-1"><a href="#cb6-1"></a>{{<span class="co">/* PROPS */</span>}}</span>
+<span id="cb6-2"><a href="#cb6-2"></a>{{$rawImageSource := .Get <span class="st">&quot;src&quot;</span>}}</span>
+<span id="cb6-3"><a href="#cb6-3"></a>{{$pixelHeight := .Get <span class="st">&quot;pixelHeight&quot;</span>}}</span>
+<span id="cb6-4"><a href="#cb6-4"></a>{{$pixelWidth := .Get <span class="st">&quot;pixelWidth&quot;</span>}}</span>
+<span id="cb6-5"><a href="#cb6-5"></a>{{$fluidMaxHeight := .Get <span class="st">&quot;fluidMaxHeight&quot;</span>}}</span>
+<span id="cb6-6"><a href="#cb6-6"></a>{{$fluidMaxWidth := .Get <span class="st">&quot;fluidMaxWidth&quot;</span>}}</span>
+<span id="cb6-7"><a href="#cb6-7"></a>{{$preloaderType := .Get <span class="st">&quot;preloaderType&quot;</span>}}</span>
+<span id="cb6-8"><a href="#cb6-8"></a>{{$resourceType := .Get <span class="st">&quot;resourceType&quot;</span>}}</span></code></pre></div>
+<aside class="notes">
+<p>I call them props because of React familiarity</p>
+<p>Actually called Parameters</p>
+</aside>
+</section>
+<section id="defaults" class="level2">
+<h2>Defaults</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb7-1"><a href="#cb7-1"></a>{{<span class="co">/* COERCING DEFAULTS */</span>}}</span>
+<span id="cb7-2"><a href="#cb7-2"></a>{{$actualPreloaderType := $PRELOADER_TYPE_BLURRED}}</span>
+<span id="cb7-3"><a href="#cb7-3"></a>{{with $preloaderType}}</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  {{$actualPreloaderType = $preloaderType}}</span>
+<span id="cb7-5"><a href="#cb7-5"></a>{{end}}</span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>{{$actualResourceType := $RESOURCE_TYPE_PAGE}}</span>
+<span id="cb7-8"><a href="#cb7-8"></a>{{<span class="kw">if</span> eq $resourceType $RESOURCE_TYPE_GLOBAL}}</span>
+<span id="cb7-9"><a href="#cb7-9"></a>  {{$actualResourceType = $RESOURCE_TYPE_GLOBAL}}</span>
+<span id="cb7-10"><a href="#cb7-10"></a>{{end}}</span></code></pre></div>
+<aside class="notes">
+<p>One thing to note: Go is not picky about type safety here</p>
+<p>You could default a value to a string and re-assign to an Image just fine</p>
+</aside>
+</section>
+<section id="sourcing-resources" class="level2">
+<h2>Sourcing Resources</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb8-1"><a href="#cb8-1"></a>{{<span class="co">/* Processing Resource */</span>}}</span>
+<span id="cb8-2"><a href="#cb8-2"></a>{{$fullSizeImagePath := $rawImageSource}}</span>
+<span id="cb8-3"><a href="#cb8-3"></a>{{<span class="kw">if</span> strings.HasPrefix $rawImageSource <span class="st">&quot;http&quot;</span>}}</span>
+<span id="cb8-4"><a href="#cb8-4"></a>  {{$image  = $rawImageSource | resources.GetRemote}}</span>
+<span id="cb8-5"><a href="#cb8-5"></a>{{<span class="kw">else</span>}}</span>
+<span id="cb8-6"><a href="#cb8-6"></a>  {{<span class="kw">if</span> eq $actualResourceType $RESOURCE_TYPE_GLOBAL}}</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    {{$image  = resources.Get $rawImageSource }}</span>
+<span id="cb8-8"><a href="#cb8-8"></a>  {{<span class="kw">else</span>}}</span>
+<span id="cb8-9"><a href="#cb8-9"></a>    {{$image  = .Page.Resources.GetMatch $rawImageSource }}</span>
+<span id="cb8-10"><a href="#cb8-10"></a>  {{end}}</span>
+<span id="cb8-11"><a href="#cb8-11"></a></span>
+<span id="cb8-12"><a href="#cb8-12"></a>  {{$fullSizeImagePath = $image.Permalink}}</span>
+<span id="cb8-13"><a href="#cb8-13"></a>{{end}}</span></code></pre></div>
+<aside class="notes">
+<p>This is done to decide whether the resource is: - remote or local - locally global or content relative</p>
+</aside>
+</section>
+<section id="sourcing-resources-1" class="level2">
+<h2>Sourcing Resources</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb9-1"><a href="#cb9-1"></a>{{<span class="co">/* Processing Image */</span>}}</span>
+<span id="cb9-2"><a href="#cb9-2"></a>{{$preloaderImage := $image.Resize <span class="st">&quot;40x&quot;</span>}}</span>
+<span id="cb9-3"><a href="#cb9-3"></a>{{<span class="kw">if</span> (eq $actualPreloaderType $PRELOADER_TYPE_PIXELLATED)}}</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  {{$preloaderImage = $image | images.Filter (images.Pixelate <span class="dv">60</span>)}}</span>
+<span id="cb9-5"><a href="#cb9-5"></a>{{end}}</span></code></pre></div>
+<aside class="notes">
+<p>Defaults to processing a mini version for blur up</p>
+<p>Additionally runs pixellated filter if param is set for it</p>
+<p>I would like to not process the image twice. Not sure how yet</p>
+</aside>
+</section>
+<section id="sourcing-resources-2" class="level2">
+<h2>Sourcing Resources</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb10-1"><a href="#cb10-1"></a>{{<span class="co">/* Processing Image */</span>}}</span>
+<span id="cb10-2"><a href="#cb10-2"></a>{{$preloaderImage := $image.Resize <span class="st">&quot;40x&quot;</span>}}</span>
+<span id="cb10-3"><a href="#cb10-3"></a>{{<span class="kw">if</span> (eq $actualPreloaderType $PRELOADER_TYPE_PIXELLATED)}}</span>
+<span id="cb10-4"><a href="#cb10-4"></a>  {{$preloaderImage = $image | images.Filter (images.Pixelate <span class="dv">60</span>)}}</span>
+<span id="cb10-5"><a href="#cb10-5"></a>{{end}}</span></code></pre></div>
+<aside class="notes">
+<p>Defaults to processing a mini version for blur up</p>
+<p>Additionally runs pixellated filter if param is set for it</p>
+<p>I would like to not process the image twice. Not sure how yet</p>
+</aside>
+</section>
+<section id="sizing-the-image" class="level2">
+<h2>Sizing the image</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb11-1"><a href="#cb11-1"></a>{{<span class="co">/* Sizing */</span>}}</span>
+<span id="cb11-2"><a href="#cb11-2"></a>{{$width := $image.Width}}</span>
+<span id="cb11-3"><a href="#cb11-3"></a>{{with $pixelWidth}}</span>
+<span id="cb11-4"><a href="#cb11-4"></a>  {{$width = $pixelWidth}}</span>
+<span id="cb11-5"><a href="#cb11-5"></a>{{end}}</span>
+<span id="cb11-6"><a href="#cb11-6"></a></span>
+<span id="cb11-7"><a href="#cb11-7"></a>{{$height := $image.Height}}</span>
+<span id="cb11-8"><a href="#cb11-8"></a>{{with $pixelHeight}}</span>
+<span id="cb11-9"><a href="#cb11-9"></a>  {{$height = $pixelHeight}}</span>
+<span id="cb11-10"><a href="#cb11-10"></a>{{end}}</span></code></pre></div>
+<aside class="notes">
+<p>This is used to scale the placeholder and prevent layout shift</p>
+<p>It defaults to using the original image size</p>
+</aside>
+</section>
+<section id="the-html" class="level2">
+<h2>The HTML</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">&lt;div</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="ot">  class=</span><span class="st">&quot;hugo-image-wrapper&quot;</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="ot">  style=</span><span class="st">&quot;width: {{$width}}px; height: {{$height}}px&quot;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="kw">&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="kw">&lt;img</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="ot">    class=</span><span class="st">&quot;hugo-image-placeholder {{if (eq $actualPreloaderType $PRELOADER_TYPE_BLURRED)}}hugo-image-blurred{{end}}&quot;</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="ot">    src=</span><span class="st">&quot;{{$preloaderImage.RelPermalink}}&quot;</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="ot">    height=</span><span class="st">&quot;{{$height}}&quot;</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a><span class="ot">    width=</span><span class="st">&quot;{{$width}}&quot;</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a>  <span class="kw">/&gt;</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>  <span class="kw">&lt;img</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a><span class="ot">    src=</span><span class="st">&quot;&quot;</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a><span class="ot">    data-full-size-src=</span><span class="st">&quot;{{$fullSizeImagePath}}&quot;</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a><span class="ot">    class=</span><span class="st">&quot;hugo-image-full-size&quot;</span></span>
+<span id="cb12-15"><a href="#cb12-15"></a><span class="ot">    height=</span><span class="st">&quot;{{$height}}&quot;</span></span>
+<span id="cb12-16"><a href="#cb12-16"></a><span class="ot">    width=</span><span class="st">&quot;{{$width}}&quot;</span></span>
+<span id="cb12-17"><a href="#cb12-17"></a>  <span class="kw">/&gt;</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<aside class="notes">
+<p>This is the resulting HTML template where we use the values from before</p>
+</aside>
+</section>
+<section id="the-styling" class="level2">
+<h2>The Styling</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">.hugo-image-wrapper</span> {</span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="kw">position</span>: <span class="dv">relative</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="kw">overflow</span>: <span class="dv">hidden</span><span class="op">;</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>}</span>
+<span id="cb13-5"><a href="#cb13-5"></a></span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="fu">.hugo-image-placeholder</span> {</span>
+<span id="cb13-7"><a href="#cb13-7"></a>  <span class="kw">position</span>: <span class="dv">absolute</span><span class="op">;</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a>  <span class="kw">top</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a>  <span class="kw">right</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a>  <span class="kw">bottom</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a>  <span class="kw">left</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a>}</span>
+<span id="cb13-13"><a href="#cb13-13"></a></span>
+<span id="cb13-14"><a href="#cb13-14"></a><span class="fu">.hugo-image-full-size</span> {</span>
+<span id="cb13-15"><a href="#cb13-15"></a>  <span class="kw">position</span>: <span class="dv">absolute</span><span class="op">;</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a>  <span class="kw">top</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-17"><a href="#cb13-17"></a>  <span class="kw">right</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-18"><a href="#cb13-18"></a>  <span class="kw">bottom</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-19"><a href="#cb13-19"></a>  <span class="kw">left</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-20"><a href="#cb13-20"></a>  <span class="kw">opacity</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb13-21"><a href="#cb13-21"></a>  <span class="kw">transition</span>: opacity <span class="dv">1</span><span class="dt">s</span><span class="op">;</span></span>
+<span id="cb13-22"><a href="#cb13-22"></a>}</span>
+<span id="cb13-23"><a href="#cb13-23"></a></span>
+<span id="cb13-24"><a href="#cb13-24"></a><span class="fu">.hugo-image-blurred</span> {</span>
+<span id="cb13-25"><a href="#cb13-25"></a>  <span class="kw">filter</span>: <span class="fu">blur(</span><span class="dv">20</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb13-26"><a href="#cb13-26"></a>}</span>
+<span id="cb13-27"><a href="#cb13-27"></a></span>
+<span id="cb13-28"><a href="#cb13-28"></a><span class="fu">.hugo-image-loaded</span> {</span>
+<span id="cb13-29"><a href="#cb13-29"></a>  <span class="kw">opacity</span>: <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb13-30"><a href="#cb13-30"></a>}</span></code></pre></div>
+<aside class="notes">
+<p>Just some positioning magic and filtering so that the full image loads over the placeholder</p>
+</aside>
+</section>
+<section id="the-scripting" class="level2">
+<h2>The Scripting</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1"></a><span class="va">document</span>.<span class="at">addEventListener</span>(<span class="st">&quot;DOMContentLoaded&quot;</span><span class="op">,</span> <span class="kw">function</span> () <span class="op">{</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="kw">let</span> observer <span class="op">=</span> <span class="kw">new</span> <span class="at">IntersectionObserver</span>(</span>
+<span id="cb14-3"><a href="#cb14-3"></a>    (entries<span class="op">,</span> observer) <span class="kw">=&gt;</span> <span class="op">{</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>      <span class="va">entries</span>.<span class="at">forEach</span>((entry) <span class="kw">=&gt;</span> <span class="op">{</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>        <span class="cf">if</span> (<span class="va">entry</span>.<span class="at">isIntersecting</span>) <span class="op">{</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a>          <span class="kw">const</span> fullSizeImageElement <span class="op">=</span> <span class="va">entry</span>.<span class="va">target</span>.<span class="at">querySelector</span>(</span>
+<span id="cb14-7"><a href="#cb14-7"></a>            <span class="st">&quot;.hugo-image-full-size&quot;</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a>          )<span class="op">;</span></span>
+<span id="cb14-9"><a href="#cb14-9"></a></span>
+<span id="cb14-10"><a href="#cb14-10"></a>          <span class="va">fullSizeImageElement</span>.<span class="at">addEventListener</span>(<span class="st">&quot;load&quot;</span><span class="op">,</span> <span class="kw">function</span> (event) <span class="op">{</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a>            <span class="va">event</span>.<span class="va">target</span>.<span class="va">classList</span>.<span class="at">add</span>(<span class="st">&quot;hugo-image-loaded&quot;</span>)<span class="op">;</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a>          <span class="op">}</span>)<span class="op">;</span></span>
+<span id="cb14-13"><a href="#cb14-13"></a></span>
+<span id="cb14-14"><a href="#cb14-14"></a>          <span class="va">fullSizeImageElement</span>.<span class="at">addEventListener</span>(<span class="st">&quot;error&quot;</span><span class="op">,</span> <span class="kw">function</span> (event) <span class="op">{</span></span>
+<span id="cb14-15"><a href="#cb14-15"></a>            <span class="co">// console.log(&quot;error&quot;, { event });</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a>          <span class="op">}</span>)<span class="op">;</span></span>
+<span id="cb14-17"><a href="#cb14-17"></a>          <span class="va">fullSizeImageElement</span>.<span class="at">src</span> <span class="op">=</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a>            <span class="va">fullSizeImageElement</span>.<span class="at">getAttribute</span>(<span class="st">&quot;data-full-size-src&quot;</span>)<span class="op">;</span></span>
+<span id="cb14-19"><a href="#cb14-19"></a>        <span class="op">}</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a>      <span class="op">}</span>)<span class="op">;</span></span>
+<span id="cb14-21"><a href="#cb14-21"></a>    <span class="op">},</span></span>
+<span id="cb14-22"><a href="#cb14-22"></a>    <span class="op">{</span></span>
+<span id="cb14-23"><a href="#cb14-23"></a>      <span class="dt">root</span><span class="op">:</span> <span class="va">document</span>.<span class="at">querySelector</span>(<span class="st">&quot;window&quot;</span>)<span class="op">,</span></span>
+<span id="cb14-24"><a href="#cb14-24"></a>      <span class="dt">rootMargin</span><span class="op">:</span> <span class="st">&quot;0px&quot;</span><span class="op">,</span></span>
+<span id="cb14-25"><a href="#cb14-25"></a>      <span class="dt">threshold</span><span class="op">:</span> <span class="fl">1.0</span><span class="op">,</span></span>
+<span id="cb14-26"><a href="#cb14-26"></a>    <span class="op">}</span></span>
+<span id="cb14-27"><a href="#cb14-27"></a>  )<span class="op">;</span></span>
+<span id="cb14-28"><a href="#cb14-28"></a>  <span class="va">document</span>.<span class="at">querySelectorAll</span>(<span class="st">&quot;.hugo-image-wrapper&quot;</span>).<span class="at">forEach</span>((imageWrapper) <span class="kw">=&gt;</span> <span class="op">{</span></span>
+<span id="cb14-29"><a href="#cb14-29"></a>    <span class="va">observer</span>.<span class="at">observe</span>(imageWrapper)<span class="op">;</span></span>
+<span id="cb14-30"><a href="#cb14-30"></a>  <span class="op">}</span>)<span class="op">;</span></span>
+<span id="cb14-31"><a href="#cb14-31"></a><span class="op">}</span>)<span class="op">;</span></span></code></pre></div>
+<aside class="notes">
+<p>Intersection observer magic</p>
+<p>preloading the full image behind the scenes and fading it in when loaded</p>
+</aside>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="citations" class="level2">
+<h2>Citations</h2>
+<ul>
+<li>Hugo Docs: <a href="https://gohugo.io/">https://gohugo.io/</a></li>
+<li>Early inspiration: <a href="https://engineering.fb.com/2015/08/06/android/the-technology-behind-preview-photos/">https://engineering.fb.com/2015/08/06/android/the-technology-behind-preview-photos/</a></li>
+<li>Placeholder techniques: <a href="https://jmperezperez.com/blog/svg-placeholders/">https://jmperezperez.com/blog/svg-placeholders/</a></li>
+<li>Gatsby- Image: <a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-image">https://www.gatsbyjs.com/plugins/gatsby-plugin-image</a></li>
+<li>Scully Image: <a href="https://scully-image.github.io/">https://scully-image.github.io/</a></li>
+</ul>
+<aside class="notes">
+<p>I made Scully image for Scully the Angular static site generator</p>
+<p>I wanted to see if I could do it for Hugo</p>
+</aside>
+</section>
+<section id="hugoconf" class="level2">
+<h2>HugoConf</h2>
+<p><img data-src="assets/hugo-conf-logo.png" /></p>
+<section id="the-free-online-conference-for-everything-hugo" class="level3">
+<h3>The free, online conference for everything Hugo</h3>
+<p><a href="https://hugoconf.io/">https://hugoconf.io/</a></p>
+<aside class="notes">
+<p>I made Scully image for Scully the Angular static site generator</p>
+<p>I wanted to see if I could do it for Hugo</p>
+</aside>
+<script>
+/* Global Scripting goes here */
+
+
+
+</script>
+<style>
+/* Global Styles go here */
+pre, code {
+  background: white;
+}
+
+
+</style>
+</section>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
