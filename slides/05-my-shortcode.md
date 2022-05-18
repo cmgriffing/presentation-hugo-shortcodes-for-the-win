@@ -68,4 +68,10 @@ Roadmap:
 - figure out how to include script and style snippets at a global level instead of shortcodes
 - add file for render hook to process markdown images
 
+## What do you call an electric car that isn't moving?
+
+## Static
+
+![](assets/agent-smith.gif)
+
 ---

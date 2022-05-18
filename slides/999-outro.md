@@ -28,6 +28,14 @@ I wanted to see if I could do it for Hugo
 
 </div>
 
+## What did Gandalf say to Elrond as he watched him make a basket?
+
+## There Hugo Weaving again.
+
+![](assets/the-matrix-hugo-weaving.gif)
+
+# Thanks.
+
 <script>
 /* Global Scripting goes here */
 

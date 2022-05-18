@@ -48,4 +48,10 @@ Convention over Configuration
 
 [https://gohugo.io/getting-started/directory-structure/](https://gohugo.io/getting-started/directory-structure/)
 
+## I think my white noise machine is broken...
+
+## It keeps making static.
+
+![](assets/matrix-agent-smith-turn.gif)
+
 ---

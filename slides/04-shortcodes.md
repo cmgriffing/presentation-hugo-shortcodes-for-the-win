@@ -37,4 +37,10 @@ Example:
 
 [https://gohugo.io/templates/shortcode-templates/](https://gohugo.io/templates/shortcode-templates/)
 
+## A sweater I bought was picking up static electricity. So, I returned it to the store.
+
+## They gave me another one free of charge.
+
+![](assets/matrix-agent-smith-turn.gif)
+
 ---

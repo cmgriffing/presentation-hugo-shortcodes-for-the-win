@@ -260,4 +260,10 @@ preloading the full image behind the scenes and fading it in when loaded
 
 </div>
 
+## I went to pick up my son the other day, and there was a static shock. I realized it's true what they say...
+
+## Having kids grounds you
+
+![](assets/hugo-gun.gif)
+
 ---
