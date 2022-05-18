@@ -108,25 +108,6 @@ I would like to not process the image twice. Not sure how yet
 
 </div>
 
-## Sourcing Resources
-
-```Go
-{{/* Processing Image */}}
-{{$preloaderImage := $image.Resize "40x"}}
-{{if (eq $actualPreloaderType $PRELOADER_TYPE_PIXELLATED)}}
-  {{$preloaderImage = $image | images.Filter (images.Pixelate 60)}}
-{{end}}
-```
-
-<div class="notes">
-Defaults to processing a mini version for blur up
-
-Additionally runs pixellated filter if param is set for it
-
-I would like to not process the image twice. Not sure how yet
-
-</div>
-
 ## Sizing the image
 
 ```Go
