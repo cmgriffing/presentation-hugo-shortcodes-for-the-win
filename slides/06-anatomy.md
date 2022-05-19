@@ -89,7 +89,7 @@ This is done to decide whether the resource is:
 
 </div>
 
-## Sourcing Resources
+## Processing Images
 
 ```Go
 {{/* Processing Image */}}
