@@ -41,6 +41,6 @@ Example:
 
 ## They gave me another one free of charge.
 
-![](assets/matrix-agent-smith-turn.gif)
+![](assets/matrix-agent-smith-no.gif)
 
 ---
