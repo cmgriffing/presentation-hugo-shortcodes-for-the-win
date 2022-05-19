@@ -401,8 +401,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This is done to decide whether the resource is: - remote or local - locally global or content relative</p>
 </aside>
 </section>
-<section id="sourcing-resources-1" class="level2">
-<h2>Sourcing Resources</h2>
+<section id="processing-images" class="level2">
+<h2>Processing Images</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode go"><code class="sourceCode go"><span id="cb9-1"><a href="#cb9-1"></a>{{<span class="co">/* Processing Image */</span>}}</span>
 <span id="cb9-2"><a href="#cb9-2"></a>{{$preloaderImage := $image.Resize <span class="st">&quot;40x&quot;</span>}}</span>
 <span id="cb9-3"><a href="#cb9-3"></a>{{<span class="kw">if</span> (eq $actualPreloaderType $PRELOADER_TYPE_PIXELLATED)}}</span>
